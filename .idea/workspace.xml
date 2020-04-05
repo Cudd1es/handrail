@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9a48ac0e-a0e1-4bad-a6ab-5778bfa4b260" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="handrail" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1a8YZTKgpwBzJNzArPeIZN6DCvn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="handrail" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/envs/handrail/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python">
+      <module name="handrail" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/envs/handrail/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9a48ac0e-a0e1-4bad-a6ab-5778bfa4b260" name="Default Changelist" comment="" />
+      <created>1586118743790</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586118743790</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="293" y="-878" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586124830725">
+      <screen x="-131" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="293" y="-878" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/-131.-1080.1920.1080@-131.-1080.1920.1080" timestamp="1586124830725" />
+    <state width="949" height="304" key="GridCell.Tab.0.bottom" timestamp="1586125084698">
+      <screen x="-131" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="949" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900/-131.-1080.1920.1080@-131.-1080.1920.1080" timestamp="1586124845669" />
+    <state width="949" height="304" key="GridCell.Tab.0.bottom/0.23.1440.877/-131.-1080.1920.1080@-131.-1080.1920.1080" timestamp="1586125084698" />
+    <state width="949" height="304" key="GridCell.Tab.0.center" timestamp="1586125084697">
+      <screen x="-131" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="949" height="304" key="GridCell.Tab.0.center/0.0.1440.900/-131.-1080.1920.1080@-131.-1080.1920.1080" timestamp="1586124845667" />
+    <state width="949" height="304" key="GridCell.Tab.0.center/0.23.1440.877/-131.-1080.1920.1080@-131.-1080.1920.1080" timestamp="1586125084697" />
+    <state width="949" height="304" key="GridCell.Tab.0.left" timestamp="1586125084696">
+      <screen x="-131" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="949" height="304" key="GridCell.Tab.0.left/0.0.1440.900/-131.-1080.1920.1080@-131.-1080.1920.1080" timestamp="1586124845667" />
+    <state width="949" height="304" key="GridCell.Tab.0.left/0.23.1440.877/-131.-1080.1920.1080@-131.-1080.1920.1080" timestamp="1586125084696" />
+    <state width="949" height="304" key="GridCell.Tab.0.right" timestamp="1586125084697">
+      <screen x="-131" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="949" height="304" key="GridCell.Tab.0.right/0.0.1440.900/-131.-1080.1920.1080@-131.-1080.1920.1080" timestamp="1586124845668" />
+    <state width="949" height="304" key="GridCell.Tab.0.right/0.23.1440.877/-131.-1080.1920.1080@-131.-1080.1920.1080" timestamp="1586125084697" />
+    <state x="338" y="-901" key="SettingsEditor" timestamp="1586124899171">
+      <screen x="-131" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="338" y="-901" key="SettingsEditor/0.0.1440.900/-131.-1080.1920.1080@-131.-1080.1920.1080" timestamp="1586124899171" />
+  </component>
+</project>
