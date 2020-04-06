@@ -146,11 +146,11 @@ d4.set_south_neighbour(a4)
 # beginning node, and east is the direction to send message and south is the direction of handrail.
 
 
-msg_1 = message.Message(d)
-msg_1.set_direction('east')
-msg_1.set_handrail(a1.south)
-msg_1.set_id(a1.id)
-msg_1.set_current_node(a1)
+# msg_1 = message.Message(d)
+# msg_1.set_direction('east')
+# msg_1.set_handrail(a1.south)
+# msg_1.set_id(a1.id)
+# msg_1.set_current_node(a1)
 
 
 # init a message from the topleft node
@@ -211,15 +211,22 @@ def turn(msg):
 # have a try and see if it works
 
 
-print(msg_1.current_node.id, msg_1.current_d, msg_1.handrail.id)
+# print(msg_1.current_node.id, msg_1.current_d, msg_1.handrail.id)
 # the result shows "5 0 2"
-while msg_1.current_d != d:
-    straight(msg_1)
-    print(msg_1.current_node.id, msg_1.current_d, msg_1.handrail.id)
+# while msg_1.current_d != d:
+#    straight(msg_1)
+#    print(msg_1.current_node.id, msg_1.current_d, msg_1.handrail.id)
     # the result shows "10 1 16", "14, 2, 12"
-turn(msg_1)
-print(msg_1.current_node.id, msg_1.current_d, msg_1.handrail.id)
+# turn(msg_1)
+# print(msg_1.current_node.id, msg_1.current_d, msg_1.handrail.id)
 # the result shows "14 0 10"
 # so it seems that the turn() function works
 
+# now, let's have a walkthrough
 
+
+msg_1 = message.Message(d)
+msg_1.set_direction('east')
+msg_1.set_handrail(a1.south)
+msg_1.set_id(a1.id)
+msg_1.set_current_node(a1)
