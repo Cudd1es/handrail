@@ -8,9 +8,10 @@ from random import sample
 
 # seed random number generator
 seed(1)
+d = 2
 # prepare a sequence with distinct ids from 1 to 16
 sequence = [i + 1 for i in range(16)]
-nodes = []  # list of nodes
+# nodes = []  # list of nodes
 nodes = sample(sequence, 16)
 
 # for i in range(len(nodes)):
@@ -141,4 +142,84 @@ d4.set_south_neighbour(a4)
 # print(a1.south.east.id)
 
 # now, all nodes are connected to their neighbours, like a real torus
+# let's say the node on the topleft (a1) is the
+# beginning node, and east is the direction to send message and south is the direction of handrail.
+
+
+msg_1 = message.Message(d)
+msg_1.set_direction('east')
+msg_1.set_handrail(a1.south)
+msg_1.set_id(a1.id)
+msg_1.set_current_node(a1)
+
+
+# init a message from the topleft node
+# The function that make the message be straightly forwarded within distance d
+def straight(msg):
+    direction = msg.direction
+    current_switcher = {
+        'east': msg.current_node.east,
+        'west': msg.current_node.west,
+        'north': msg.current_node.north,
+        'south': msg.current_node.south
+    }
+    nde = current_switcher.get(direction, 'Invalid direction')
+    handrail_switcher = {
+        'east': msg.handrail.east,
+        'west': msg.handrail.west,
+        'north': msg.handrail.north,
+        'south': msg.handrail.south
+    }
+    n_handrail = handrail_switcher.get(direction, 'Invalid direction')
+    msg.set_last_node(msg.current_node)
+    msg.set_current_node(nde)
+    msg.set_handrail(n_handrail)
+    msg.set_current_d(msg.current_d + 1)
+    if msg.current_node.id < msg.original_id:
+        msg.saw_smaller = True
+    elif msg.current_node.id > msg.original_id:
+        msg.seen_by_smaller = True
+    else:
+        msg.looking = False
+
+
+# have a try and see if it works
+
+# print(msg_1.current_node.id, msg_1.current_d, msg_1.handrail.id)
+# the result shows "5 0 2"
+# straight(msg_1)
+# print(msg_1.current_node.id, msg_1.current_d, msg_1.handrail.id)
+# the result shows "10 1 16"
+# so it seems that the straight() function works
+
+def turn(msg):
+    last_node = msg.last_node
+    current_node = msg.current_node
+    handrail_node = msg.handrail
+    if current_node.east_neighbour() == handrail_node:
+        n_direction = 'east'
+    elif current_node.west_neighbour() == handrail_node:
+        n_direction = 'west'
+    elif current_node.north_neighbour() == handrail_node:
+        n_direction = 'north'
+    else:
+        n_direction = 'south'
+    msg.set_direction(n_direction)
+    msg.set_handrail(last_node)
+    msg.set_current_d(0)
+
+# have a try and see if it works
+
+
+print(msg_1.current_node.id, msg_1.current_d, msg_1.handrail.id)
+# the result shows "5 0 2"
+while msg_1.current_d != d:
+    straight(msg_1)
+    print(msg_1.current_node.id, msg_1.current_d, msg_1.handrail.id)
+    # the result shows "10 1 16", "14, 2, 12"
+turn(msg_1)
+print(msg_1.current_node.id, msg_1.current_d, msg_1.handrail.id)
+# the result shows "14 0 10"
+# so it seems that the turn() function works
+
 

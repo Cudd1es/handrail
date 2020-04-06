@@ -1,6 +1,6 @@
-
 # let's imagine that we have successfully let each node knows the location of its neighbours thanks to district labeling
 # So each nodes knows its neighbours on the west, east, north and south.
+
 
 class Node:
     def __init__(self, id):
@@ -30,5 +30,3 @@ class Node:
 
     def south_neighbour(self):
         return self.south
-
-
