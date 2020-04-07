@@ -3,12 +3,16 @@ import torus
 from random import seed
 from random import randint
 from random import sample
+import sys
 
 # let's say the size of torus is 4 * 4
 
 # seed random number generator
 seed(1)
-d = 2
+
+if sys.argv[1] is None:
+    print("usage: python main.py d(d is the longest distance to go straightforwardly")
+d = int(sys.argv[1])
 # prepare a sequence with distinct ids from 1 to 16
 sequence = [i + 1 for i in range(16)]
 # nodes = []  # list of nodes
@@ -136,6 +140,7 @@ d4.set_west_neighbour(d3)
 d4.set_north_neighbour(c4)
 d4.set_south_neighbour(a4)
 
+
 # print(a1.id)
 # print(a1.east.id)
 # print(a1.east.east.id)
@@ -208,6 +213,7 @@ def turn(msg):
     msg.set_handrail(last_node)
     msg.set_current_d(0)
 
+
 # have a try and see if it works
 
 
@@ -216,11 +222,16 @@ def turn(msg):
 # while msg_1.current_d != d:
 #    straight(msg_1)
 #    print(msg_1.current_node.id, msg_1.current_d, msg_1.handrail.id)
-    # the result shows "10 1 16", "14, 2, 12"
+# the result shows "10 1 16", "14, 2, 12"
 # turn(msg_1)
 # print(msg_1.current_node.id, msg_1.current_d, msg_1.handrail.id)
 # the result shows "14 0 10"
 # so it seems that the turn() function works
+
+def print_stat(msg):
+    print('the stat of message (current node id, current d, handrail, current direction): ')
+    print(msg.current_node.id, msg.current_d, msg.handrail.id, msg.direction)
+
 
 # now, let's have a walkthrough
 
@@ -230,3 +241,40 @@ msg_1.set_direction('east')
 msg_1.set_handrail(a1.south)
 msg_1.set_id(a1.id)
 msg_1.set_current_node(a1)
+
+print_stat(msg_1)
+
+# go straightforwardly
+while msg_1.current_d < d:
+    straight(msg_1)
+    print_stat(msg_1)
+
+# first turn
+turn(msg_1)
+print_stat(msg_1)
+
+# go straightforwardly again
+while msg_1.current_d < d:
+    straight(msg_1)
+    print_stat(msg_1)
+
+# second turn
+turn(msg_1)
+print_stat(msg_1)
+
+# go straightforwardly again
+while msg_1.current_d < d:
+    straight(msg_1)
+    print_stat(msg_1)
+
+# third turn
+turn(msg_1)
+print_stat(msg_1)
+
+# go straightforwardly again
+while msg_1.current_d < d:
+    straight(msg_1)
+    print_stat(msg_1)
+
+# now, the message is supposed to be at the starting node
+print("saw smaller:", msg_1.saw_smaller, " seen by smaller:", msg_1.seen_by_smaller, " looking:", msg_1.looking)
