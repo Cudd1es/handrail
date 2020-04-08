@@ -180,12 +180,12 @@ def straight(msg):
     msg.set_current_node(nde)
     msg.set_handrail(n_handrail)
     msg.set_current_d(msg.current_d + 1)
-    if msg.current_node.id < msg.original_id:
-        msg.saw_smaller = True
-    elif msg.current_node.id > msg.original_id:
-        msg.seen_by_smaller = True
-    else:
-        msg.looking = False
+#    if msg.current_node.id < msg.original_id:
+#        msg.saw_smaller = True
+#    elif msg.current_node.id > msg.original_id:
+#        msg.seen_by_smaller = True
+#    else:
+#        msg.looking = False
 
 
 # have a try and see if it works
@@ -229,7 +229,6 @@ def turn(msg):
 # so it seems that the turn() function works
 
 def print_stat(msg):
-    print('the stat of message (current node id, current d, handrail, current direction): ')
     print(msg.current_node.id, msg.current_d, msg.handrail.id, msg.direction)
 
 
@@ -242,39 +241,48 @@ msg_1.set_handrail(a1.south)
 msg_1.set_id(a1.id)
 msg_1.set_current_node(a1)
 
+print('the stat of message (current node id, current d, handrail, current direction): ')
+print('[beginning]')
 print_stat(msg_1)
 
 # go straightforwardly
+print('[straightforwardly] ')
 while msg_1.current_d < d:
     straight(msg_1)
     print_stat(msg_1)
 
 # first turn
+print('[turning]')
 turn(msg_1)
 print_stat(msg_1)
 
 # go straightforwardly again
+print('[straightforwardly] ')
 while msg_1.current_d < d:
     straight(msg_1)
     print_stat(msg_1)
 
 # second turn
+print('[turning]')
 turn(msg_1)
 print_stat(msg_1)
 
 # go straightforwardly again
+print('[straightforwardly] ')
 while msg_1.current_d < d:
     straight(msg_1)
     print_stat(msg_1)
 
 # third turn
+print('[turning]')
 turn(msg_1)
 print_stat(msg_1)
 
 # go straightforwardly again
+print('[straightforwardly] ')
 while msg_1.current_d < d:
     straight(msg_1)
     print_stat(msg_1)
 
 # now, the message is supposed to be at the starting node
-print("saw smaller:", msg_1.saw_smaller, " seen by smaller:", msg_1.seen_by_smaller, " looking:", msg_1.looking)
+# print("saw smaller:", msg_1.saw_smaller, " seen by smaller:", msg_1.seen_by_smaller, " looking:", msg_1.looking)
